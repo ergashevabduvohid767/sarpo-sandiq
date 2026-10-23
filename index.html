@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17110d">
+<title>Sarpo Sandiq — Milliy Hashamat</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#17110d;color:#f9edcf;font-family:Georgia,serif}
+header{text-align:center;padding:28px 16px;background:linear-gradient(135deg,#24180e,#090807);border-bottom:2px solid #c49a45}
+h1{color:#e5bd65;margin-bottom:8px;font-size:30px}
+header p{color:#dfcba5}
+main{max-width:700px;margin:auto;padding:18px}
+.card{background:#251b13;border:1px solid #98753b;border-radius:14px;padding:18px;margin:16px 0}
+h2{color:#e5bd65}
+button,.btn{display:block;width:100%;padding:13px;margin:10px 0;border:0;border-radius:8px;background:#c49a45;color:#17110d;font-weight:bold;text-align:center;text-decoration:none;font-size:16px}
+input,select,textarea{width:100%;padding:12px;margin:7px 0 14px;border-radius:7px;border:1px solid #8e703b;background:#120f0c;color:#fff}
+label{display:block;color:#ead6aa}
+.small{font-size:14px;color:#cdbb9a;line-height:1.6}
+footer{text-align:center;padding:24px;color:#cdbb9a}
+</style>
+</head>
+<body>
+<header>
+<div style="font-size:42px">✦ ❖ ✦</div>
+<h1>SARPO SANDIQ</h1>
+<p>Milliy Hashamat • To‘y sarpolari ijarasi</p>
+<div>Farg‘ona viloyati, Toshloq tumani</div>
+</header>
+<main>
+<section class="card">
+<h2>✨ Hashamatli sarpo sandiqlar</h2>
+<p>To‘yingizga milliy ruh va betakror ko‘rk bag‘ishlang!</p>
+<p class="small">Turli bezakdagi sarpo sandiqlar. Ijara narxi va mavjud sanalarni telefon orqali kelishamiz.</p>
+</section>
+<section class="card">
+<h2>📋 Buyurtma berish</h2>
+<form id="orderForm">
+<label>Ism-familiyangiz</label><input id="name" required placeholder="Ismingiz">
+<label>Telefon raqamingiz</label><input id="phone" required type="tel" placeholder="+998...">
+<label>Sandiq turi</label>
+<select id="type"><option>Milliy hashamatli sandiq</option><option>Oltin bezakli sandiq</option><option>Maxsus sarpo to‘plami</option></select>
+<label>To‘y sanasi</label><input id="date" type="date" required>
+<label>Soni</label><input id="qty" type="number" min="1" value="1" required>
+<label>Qo‘shimcha izoh</label><textarea id="note" rows="3" placeholder="Manzil yoki boshqa talablar"></textarea>
+<button type="submit">Telegram orqali buyurtma berish</button>
+</form>
+<p class="small">Tugma Telegram orqali yuborish uchun buyurtma matnini tayyorlaydi. Yuborishni o‘zingiz tasdiqlaysiz.</p>
+</section>
+<section class="card">
+<h2>📞 Biz bilan bog‘laning</h2>
+<a class="btn" href="tel:+998907876151">Qo‘ng‘iroq qilish: 90 787 61 51</a>
+<a class="btn" href="https://t.me/Abduvohid_34M" target="_blank">Telegram: @Abduvohid_34M</a>
+<a class="btn" href="https://instagram.com/Abduvohid_6151" target="_blank">Instagram: @Abduvohid_6151</a>
+</section>
+</main>
+<footer>© Sarpo Sandiq — Milliy Hashamat</footer>
+<script>
+document.getElementById('orderForm').addEventListener('submit',function(e){
+e.preventDefault();
+const text='SARPO SANDIQ — BUYURTMA%0AIsm: '+encodeURIComponent(document.getElementById('name').value)+'%0ATelefon: '+encodeURIComponent(document.getElementById('phone').value)+'%0ASandiq: '+encodeURIComponent(document.getElementById('type').value)+'%0ASana: '+encodeURIComponent(document.getElementById('date').value)+'%0ASoni: '+encodeURIComponent(document.getElementById('qty').value)+'%0AIzoh: '+encodeURIComponent(document.getElementById('note').value);
+window.open('https://t.me/Abduvohid_34M','_blank');
+alert('Telegram ochiladi. Buyurtmangiz matnini nusxalab, bizga yuboring.');
+});
+</script>
+</body>
+</html>
